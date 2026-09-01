@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Display (Plus Jakarta Sans) + body (Inter) typeface pairing — see
+         skills/design-system/SKILL.md and the Phase 03 summary for rationale. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Non-render-blocking font load: fetch the stylesheet at low priority
+         (media="print" doesn't match screen rendering, so it can't block
+         first paint) and swap it to "all" once it's actually loaded. The
+         plain <link rel="stylesheet"> in <noscript> is the fallback for
+         when JS is unavailable. See "Eliminate render-blocking resources"
+         — text still renders immediately in the fallback system font
+         stack (see tailwind.config.js) and reflows once the webfont
+         arrives, rather than the request blocking first paint. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

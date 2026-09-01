@@ -1,0 +1,8 @@
+# PLACEHOLDER — swap the Sitemap URL below for the real deployed domain
+# before launch (see src/components/Seo.jsx's SITE_URL, same placeholder).
+
+User-agent: *
+Allow: /
+Disallow: /dev/
+
+Sitemap: https://www.bhutanitsolutions.example/sitemap.xml
